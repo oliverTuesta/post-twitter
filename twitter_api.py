@@ -17,18 +17,6 @@ auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
-public_tweets = api.home_timeline()
-
-columns = ['created_at', 'user', 'text', 'retweet_count']
-
-data = []
-for tweet in public_tweets:
-    data.append([tweet.created_at, tweet.user.screen_name, tweet.text, tweet.retweet_count])
-
-df = pd.DataFrame(data, columns=columns)
-
-df.to_csv('tweets.csv', index=False)
-
 # posts a tweet
 content = input('What would you like to tweet? ')
 api.update_status(content)
