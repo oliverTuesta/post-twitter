@@ -48,4 +48,10 @@ access_token_secret =  <your access token secret>
 <blockquote>
     <p>Make sure to keep secret all your credentials</p>
 </blockquote>
+<li><p>Enjoy</p></li>
+
+```
+$ python3 twitter_api.py
+```
+
 </ol>
